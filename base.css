@@ -1,0 +1,72 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+.informacoes {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    flex-direction: row;
+    gap: 150px;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-esquerda {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-direita {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    margin: 0;
+}
+
+.links-redes-sociais {
+    display: flex;
+    gap: 10px;
+}
+
+.links-uteis {
+    display: flex;
+    gap: 10px;
+}
+
+.links-contato {
+    display: flex;
+    gap: 10px;
+}
