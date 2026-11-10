@@ -267,6 +267,42 @@ body {
     background: #08378f;
 }
 
+#aviso {
+    box-sizing: border-box;
+    width: min(380px, 90vw);
+    padding: 28px;
+    border: 0;
+    border-top: 5px solid #0b46b9;
+    border-radius: 12px;
+    color: #242424;
+    box-shadow: 0 16px 48px rgb(0 0 0 / 20%);
+}
+
+#aviso::backdrop {
+    background: rgb(15 23 42 / 55%);
+}
+
+#aviso h2 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+}
+
+#aviso p {
+    margin: 0 0 22px;
+    line-height: 1.5;
+}
+
+#aviso button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 6px;
+    background: #0b46b9;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 /* Menu mobile: controle sem JavaScript */
 .menu-toggle,
 .menu-button {
