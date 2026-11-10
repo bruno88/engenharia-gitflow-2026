@@ -20,6 +20,20 @@ formulario.addEventListener("submit", function (event) {
         mostrarAviso("Falta preencher um campo", "Confira seu nome, e-mail e mensagem.");
         return;
     }
+
+    const novaMensagem = { nome, email, mensagem };
+
+    try {
+        const dadosSalvos = localStorage.getItem("mensagens");
+        const lista = dadosSalvos === null ? [] : JSON.parse(dadosSalvos);
+
+        lista.push(novaMensagem);
+        localStorage.setItem("mensagens", JSON.stringify(lista));
+    } catch {
+        mostrarAviso("Erro ao salvar", "Seus dados continuam no formulário. Tente novamente.");
+        return;
+    }
+
     formulario.reset();
-    mostrarAviso("Formulário preenchido!", `Tudo certo, ${nome}.`);
+    mostrarAviso("Mensagem salva!", `Obrigado pelo contato, ${nome}.`);
 });
