@@ -1,0 +1,421 @@
+/* ================================
+   CAR SITE - CABECALHO
+   ================================ */
+
+:root {
+  --header-dark: #252525;
+  --header-main: #303030;
+  --header-text: #f5f5f5;
+  --header-muted: #c5c5c5;
+  --brand-blue: #0646bd;
+  --brand-blue-hover: #003995;
+  --content-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container centralizado */
+.header-container {
+  width: min(var(--content-width), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* Barra superior */
+.topbar {
+  min-height: 38px;
+  background-color: var(--header-dark);
+  color: var(--header-muted);
+  font-size: 12px;
+}
+
+.topbar-content,
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-content {
+  min-height: 38px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topbar-left,
+.topbar-right {
+  gap: 20px;
+}
+
+.topbar a {
+  color: var(--header-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.topbar a:hover {
+  color: #ffffff;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 13px;
+  background-color: #666666;
+}
+
+/* Barra principal de navegacao */
+.main-nav {
+  background-color: var(--header-main);
+  color: var(--header-text);
+}
+
+.nav-content {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Marca */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: var(--brand-blue);
+}
+
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-mark svg path {
+  fill: none;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-name strong {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.brand-name strong span {
+  color: #3977df;
+}
+
+.brand-name small {
+  color: #bcbcbc;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* Links do menu */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 27px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 29px 0;
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #4b83e5;
+}
+
+.nav-link.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--brand-blue);
+  content: "";
+}
+
+/* Botao principal */
+.nav-cta {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 21px;
+  border-radius: 5px;
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-cta:hover {
+  background-color: var(--brand-blue-hover);
+  transform: translateY(-1px);
+}
+
+/*Menu Principal */
+.contato {
+    padding: 48px 16px;
+    background: #f4f6f9;
+}
+
+.form-contato {
+    box-sizing: border-box;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 36px);
+    display: grid;
+    gap: 20px;
+    background: #fff;
+    border: 1px solid #dce1e8;
+    border-radius: 12px;
+    color: #242424;
+}
+
+.form-contato h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.form-contato .campo {
+    display: grid;
+    gap: 6px;
+}
+
+.form-contato label {
+    font-weight: 600;
+}
+
+.form-contato input,
+.form-contato textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aeb7c3;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.form-contato textarea {
+    resize: vertical;
+}
+
+.form-contato :focus-visible {
+    outline: 3px solid #1255c4;
+    outline-offset: 2px;
+}
+
+.form-contato button {
+    justify-self: start;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 6px;
+    background: #0b46b9;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-contato button:hover {
+    background: #08378f;
+}
+
+/* Menu mobile: controle sem JavaScript */
+.menu-toggle,
+.menu-button {
+  display: none;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 980px) {
+  .nav-content {
+    gap: 18px;
+  }
+
+  .navigation {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .nav-cta {
+    padding: 0 14px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-container {
+    width: min(100% - 32px, var(--content-width));
+  }
+
+  .topbar-content {
+    justify-content: center;
+  }
+
+  .topbar-left {
+    display: none;
+  }
+
+  .topbar-right {
+    min-height: 34px;
+    gap: 14px;
+  }
+
+  .nav-content {
+    position: relative;
+    min-height: 70px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .brand-mark {
+    width: 43px;
+    height: 43px;
+  }
+
+  .brand-name strong {
+    font-size: 18px;
+  }
+
+  /* Botao hamburguer */
+  .menu-button {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .menu-button span {
+    width: 19px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .navigation {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0 12px;
+  }
+
+  .nav-link {
+    padding: 13px 4px;
+    border-bottom: 1px solid #444444;
+    font-size: 12px;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-cta {
+    min-height: 43px;
+    margin-top: 12px;
+  }
+
+  .menu-toggle:checked ~ .navigation {
+    display: flex;
+  }
+
+  .menu-toggle:focus-visible + .menu-button {
+    outline: 2px solid #7eabff;
+    outline-offset: 3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar {
+    font-size: 11px;
+  }
+
+  .topbar-right {
+    gap: 9px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name strong {
+    font-size: 16px;
+  }
+
+  .brand-name small {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+}
