@@ -1,12 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Primeiro Titulo </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Car Site - encontre seu próximo veículo.">
+  <title>Car Site</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Criado o primeiro arquivo do projeto -->
-    
+
+  <!-- CABECALHO: barra superior + navegacao principal -->
+  <header class="site-header">
+
+    <!-- Barra superior de informacoes -->
+    <div class="topbar">
+      <div class="header-container topbar-content">
+        <div class="topbar-left">
+          <span>Atendimento online</span>
+          <span class="topbar-divider" aria-hidden="true"></span>
+          <span>Encontre o veículo ideal para você</span>
+        </div>
+
+        <div class="topbar-right">
+          <a href="#contato">Fale conosco</a>
+          <span class="topbar-divider" aria-hidden="true"></span>
+          <a href="#sobre">Sobre nós</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegacao principal -->
+    <div class="main-nav">
+      <div class="header-container nav-content">
+
+        <a class="brand" href="#inicio" aria-label="Car Site - página inicial">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <circle cx="24" cy="24" r="21" />
+              <path d="M8 27h5l4-8h14l5 8h4v8h-4a4 4 0 0 1-8 0h-8a4 4 0 0 1-8 0H8z" />
+              <path d="M19 22l-3 5h16l-3-5z" />
+              <circle cx="18" cy="35" r="2.4" />
+              <circle cx="32" cy="35" r="2.4" />
+            </svg>
+          </span>
+
+          <span class="brand-name">
+            <strong>CAR <span>SITE</span></strong>
+            <small>SUA PRÓXIMA CONQUISTA</small>
+          </span>
+        </a>
+
+        <!-- Controle do menu mobile feito apenas com CSS -->
+        <input class="menu-toggle" type="checkbox" id="menu-toggle"
+               aria-label="Abrir ou fechar menu de navegação">
+
+        <label class="menu-button" for="menu-toggle"
+               aria-label="Abrir ou fechar menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="navigation" aria-label="Menu principal">
+          <a class="nav-link active" href="#inicio">Início</a>
+          <a class="nav-link" href="#comprar">Comprar</a>
+          <a class="nav-link" href="#vender">Vender</a>
+          <a class="nav-link" href="#modelos">Modelos</a>
+          <a class="nav-link" href="#sobre">Sobre nós</a>
+          <a class="nav-link" href="#contato">Contato</a>
+          <a class="nav-cta" href="#comprar">EXPLORAR VEÍCULOS</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
 </body>
 </html>
