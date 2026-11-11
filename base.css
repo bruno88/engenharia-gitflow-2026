@@ -2,6 +2,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #f4f8fa;
+    color: #26343d;
+    font: 16px Arial, sans-serif;
+    text-align: center;
     padding: 0;
     margin: 0;
 }
@@ -11,6 +15,92 @@ main {
     background-color: white;
 }
 
+.inicio {
+    padding: 60px 20px
+}
+
+.destaque {
+    color: #159f9a;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px
+}
+
+.inicio h1 {
+    font-size: 48px;
+    margin: 15px 0;
+    color: #20323b
+}
+
+.inicio p:not(.destaque) {
+    font-size: 20px;
+    color: #5b6b73
+}
+
+.imagem {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 35px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px #23404a26
+}
+
+.imagem:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 22px #23404a26;
+}
+
+.sobre {
+    padding: 60px 20px;
+    border-top: 1px solid #d9e4e8
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin: 10px 0 30px;
+    color: #20323b
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.beneficios article {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e0eaed;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #23404a12;
+    transition: transform .25s ease, box-shadow .25s ease
+}
+
+.beneficios article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px #23404a26
+}
+
+.beneficios strong {
+    color: #159f9a;
+    font-size: 30px
+}
+
+.beneficios h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #26343d
+}
+
+.beneficios p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #687980
+}
+
+/*------------------------ footer ----------------------------*/
 footer {
     display: flex;
     flex-direction: column;
