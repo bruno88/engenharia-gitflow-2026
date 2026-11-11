@@ -11,6 +11,85 @@ main {
     background-color: white;
 }
 
+/* =========== Formulário de Cadastro =============== */
+
+.formCadastro {
+    max-width: 480px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: #eaf3ff;
+    border: 2px solid #1e6fd9;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 12px rgba(30, 111, 217, 0.25);
+}
+
+.formCadastro h3 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #0d4a9e;
+}
+
+.formCadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formCadastro label {
+    font-weight: bold;
+    color: #0d4a9e;
+}
+
+.formCadastro #inImg {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1e6fd9;
+    margin-bottom: 8px;
+}
+
+.formCadastro input,
+.formCadastro textarea {
+    padding: 10px;
+    border: 1px solid #7fb2f0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #0d2b52;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formCadastro input:focus,
+.formCadastro textarea:focus {
+    border-color: #1e6fd9;
+    box-shadow: 0 0 0 3px rgba(30, 111, 217, 0.25);
+}
+
+.formCadastro textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.formCadastro button {
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1e6fd9;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.formCadastro button:hover {
+    background-color: #0d4a9e;
+}
+
 footer {
     display: flex;
     flex-direction: column;
