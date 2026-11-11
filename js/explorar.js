@@ -3,20 +3,27 @@ const inModelo = document.getElementById('inModelo');
 const btFiltrar = document.getElementById('btFiltrar');
 const btLimpar = document.getElementById('btLimpar');
 
-const vetorTeste = [
+/* const vetorTeste = [
     {marca: 'honda', modelo: 'cg160'},
     {marca: 'honda', modelo: 'fz250'},
     {marca: 'bajaj', modelo: 'd400'},
     {marca: 'bajaj', modelo: 'd250'},
     {marca: 'royal enfield', modelo: 'b350'},
 ];
-
+ */
 export function filtrar(_marca, _modelo){
 
-    let motos = vetorTeste.filter(moto => (moto.marca == _marca && moto.modelo == _modelo) || (_marca == "" && moto.modelo == _modelo) || (moto.marca == _marca &&  _modelo== ""));
-    let txtFormatado = motos.map(moto => `Moto da marca: ${moto.marca} e modelo: ${moto.modelo}`).join("\n"); //tava usando forEach porem ele SEMPRE retorna undefined, o certo é map
+     const veiculosCadastrados = JSON.parse(localStorage.getItem('veiculos')) || []; // VETOR DO LOCALSTORAGE
 
-    if (motos.length == 0) {
+    let veiculos = veiculosCadastrados.filter(veiculo => 
+           (veiculo.marca == _marca && veiculo.modelo == _modelo)   // os dois preenchidos
+        || (_marca == "" && veiculo.modelo == _modelo)          // somente modelo preenchido
+        || (veiculo.marca == _marca &&  _modelo== ""))         // somente marca preenchido
+        || (_marca == "" && _modelo == "");                // se os campos forem vazios, vai retornar true então todos carros são true
+
+    let txtFormatado = veiculos.map(veiculo => `veiculo da marca: ${veiculo.marca} e modelo: ${veiculo.modelo}`).join("\n"); //tava usando forEach porem ele SEMPRE retorna undefined, o certo é map
+
+    if (veiculos.length == 0) {
         console.log("modelo ou marca não encontrados");
     }else{
 
