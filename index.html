@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Autenticação e Gerenciamento</title>
+    <!-- Fonte Inter para tipografia limpa e moderna -->
+     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Container de Notificações Toast -->
+    <div id="toast-container"></div>
+
+    <main class="app-container" id="app-container">
+
+        <!-- ==========================================
+             SEÇÃO 1: CADASTRO
+             ========================================== -->
+        <section id="register-section" class="card-section active">
+            <div class="header">
+                <h2>Criar Conta</h2>
+                <p>Preencha seus dados para se cadastrar</p>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg-name">Nome Completo</label>
+                    <input type="text" id="reg-name" placeholder="Ex: Ana Silva" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Senha</label>
+                    <input type="password" id="reg-password" placeholder="Sua senha secreta" minlength="4" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+            <div class="toggle-text">
+                Já tem uma conta? <a href="#" onclick="switchSection('login-section')">Faça Login</a>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 2: LOGIN
+             ========================================== -->
+        <section id="login-section" class="card-section">
+            <div class="header">
+                <h2>Bem-vindo de volta</h2>
+                <p>Insira suas credenciais para entrar</p>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="login-email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" placeholder="Sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <div class="toggle-text">
+                Ainda não tem conta? <a href="#" onclick="switchSection('register-section')">Cadastre-se</a>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 3: DASHBOARD / GERENCIAMENTO
+             ========================================== -->
+        <section id="dashboard-section" class="card-section">
+            <div class="header">
+                <h2>Painel do Usuário</h2>
+                <p>Gerencie suas informações da conta</p>
+            </div>
+
+            <!-- Cartão Visual com Perfil -->
+            <div class="user-badge">
+                <div class="avatar" id="dash-avatar">U</div>
+                <div class="user-details">
+                    <h3 id="dash-welcome-name">Usuário</h3>
+                    <p id="dash-display-email">email@exemplo.com</p>
+                </div>
+            </div>
+
+            <!-- Formulário de Atualização -->
+            <form id="update-profile-form">
+                <div class="form-group">
+                    <label for="dash-name">Atualizar Nome de Exibição</label>
+                    <input type="text" id="dash-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dash-password">Alterar Senha</label>
+                    <input type="password" id="dash-password" placeholder="Nova senha (deixe em branco para manter)">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </form>
+
+            <div class="divider"></div>
+
+            <button type="button" class="btn btn-danger" onclick="logout()">
+                Sair da Conta
+            </button>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         LÓGICA JAVASCRIPT
+         ========================================== -->
+    <script src="script.js"></script>
+</body>
+</html>
