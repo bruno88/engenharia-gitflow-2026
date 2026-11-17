@@ -20,7 +20,7 @@ export function filtrar(_marca, _modelo) {
         || (veiculo.marca == _marca && _modelo == ""))         // somente marca preenchido
         || (_marca == "" && _modelo == "");                // se os campos forem vazios, vai retornar true então todos carros são true
 
-    let txtFormatado = veiculos.map(veiculo => `veiculo da marca: ${veiculo.marca} e modelo: ${veiculo.modelo}`).join("\n"); //tava usando forEach porem ele SEMPRE retorna undefined, o certo é map
+    let txtFormatado = veiculos.map(veiculo => `veiculo da marca: ${veiculo.marca} e modelo: ${veiculo.modelo} do id:${veiculo.id}`).join("\n"); //tava usando forEach porem ele SEMPRE retorna undefined, o certo é map
 
     if (veiculos.length == 0) {
         console.log("modelo ou marca não encontrados");
