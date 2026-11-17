@@ -11,27 +11,34 @@ const btLimpar = document.getElementById('btLimpar');
     {marca: 'royal enfield', modelo: 'b350'},
 ];
  */
-export function filtrar(_marca, _modelo){
+export function filtrar(_marca, _modelo) {
+    const veiculosCadastrados = JSON.parse(localStorage.getItem('veiculos')) || []; // VETOR DO LOCALSTORAGE
 
-     const veiculosCadastrados = JSON.parse(localStorage.getItem('veiculos')) || []; // VETOR DO LOCALSTORAGE
-
-    let veiculos = veiculosCadastrados.filter(veiculo => 
-           (veiculo.marca == _marca && veiculo.modelo == _modelo)   // os dois preenchidos
+    let veiculos = veiculosCadastrados.filter(veiculo =>
+        (veiculo.marca == _marca && veiculo.modelo == _modelo)   // os dois preenchidos
         || (_marca == "" && veiculo.modelo == _modelo)          // somente modelo preenchido
-        || (veiculo.marca == _marca &&  _modelo== ""))         // somente marca preenchido
+        || (veiculo.marca == _marca && _modelo == ""))         // somente marca preenchido
         || (_marca == "" && _modelo == "");                // se os campos forem vazios, vai retornar true então todos carros são true
 
     let txtFormatado = veiculos.map(veiculo => `veiculo da marca: ${veiculo.marca} e modelo: ${veiculo.modelo}`).join("\n"); //tava usando forEach porem ele SEMPRE retorna undefined, o certo é map
 
     if (veiculos.length == 0) {
         console.log("modelo ou marca não encontrados");
-    }else{
-
+    } else {
         console.log(txtFormatado);
     }
+}
 
+export function limparCampos(vetCampos){
+    vetCampos.forEach(campo => {
+        campo.value = "";
+    });  
 }
 
 btFiltrar.addEventListener('click', () => {
     filtrar(inMarca.value, inModelo.value);
+});
+
+btLimpar.addEventListener('click', () =>{
+    limparCampos([inMarca, inModelo]);
 });
