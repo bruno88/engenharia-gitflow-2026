@@ -6,6 +6,7 @@ export class Veiculo{
     descricao;
 
     constructor(marca, modelo, ano, imagem, descricao){
+        this.id = crypto.randomUUID();
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;

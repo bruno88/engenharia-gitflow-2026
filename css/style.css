@@ -351,3 +351,145 @@ body {
     letter-spacing: 1.5px;
   }
 }
+
+
+/* =====================================
+   NEWSLETTER - CAR SITE
+===================================== */
+
+.newsletter-section {
+    background: #172b3f;
+    padding: 65px 8%;
+    color: #ffffff;
+}
+
+.newsletter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.newsletter-text {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-tag {
+    color: #55aaff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.newsletter-text h2 {
+    font-size: 34px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.newsletter-text p {
+    color: #d1dbe5;
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-info {
+    display: inline-block;
+    margin-top: 15px;
+    color: #8fc7ff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.newsletter-form {
+    flex: 1;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    color: #26384a;
+}
+
+.newsletter-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.newsletter-input label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.newsletter-input input {
+    padding: 12px;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.newsletter-input input:focus {
+    border-color: #2585d8;
+}
+
+.newsletter-observacao {
+    color: #687786;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.newsletter-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2585d8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-button:hover {
+    background: #1768ad;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .newsletter-text {
+        width: 100%;
+    }
+
+    .newsletter-text h2 {
+        font-size: 27px;
+    }
+
+    .newsletter-form {
+        max-width: 450px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}

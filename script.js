@@ -9,7 +9,7 @@ const inDescricao = document.getElementById("inDescricao");
 
 formCadastroVeiculo.addEventListener('submit', cadastrarVeiculo);
 
-function cadastrarVeiculo(event){
+export function cadastrarVeiculo(event) {
     event.preventDefault();
 
     const novoVeiculo = new Veiculo(inMarca.value, inModelo.value, inAno.value, inImg.src, inDescricao.value);
@@ -19,4 +19,22 @@ function cadastrarVeiculo(event){
     veiculosCadastrados.push(novoVeiculo);
 
     localStorage.setItem('veiculos', JSON.stringify(veiculosCadastrados));
+}
+
+export function excluirVeiculo(id) {
+    const vetVeiculosCadastrados = JSON.parse(localStorage.getItem('veiculos')) || []; //para ler o local storage
+
+    let existe = vetVeiculosCadastrados.findIndex((veiculos) => veiculos.id == id);
+
+    if (existe === -1) {
+        console.log(" id não encontrado")
+    }
+
+    vetVeiculosCadastrados.splice(existe, 1);
+
+    localStorage.setItem('veiculos', JSON.stringify(vetVeiculosCadastrados));
+
+    console.log(`Excluido o veiculo do id: ${existe.id}`);
+    /* getItem + JSON.parse  →  minhas modificações  →  JSON.stringify + setItem
+       (ler)                          (excluir)                       (salvar) */
 }
