@@ -1,0 +1,143 @@
+
+.filtro {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.filtro-form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 25px 30px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.filtro-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+    min-width: 190px;
+}
+
+.filtro-campo label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+}
+
+.filtro-campo input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    background: #f5f6f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.filtro-campo input:focus {
+    border-color: #0752c9;
+    background: white;
+}
+
+/* ===== BOTÕES DOS FILTROS ===== */
+
+.filtro-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botao-filtrar,
+.botao-limpar {
+    height: 48px;
+    padding: 0 25px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-filtrar {
+    background: #0752c9;
+    color: white;
+    border: 1px solid #0752c9;
+}
+
+.botao-filtrar:hover {
+    background: #063e98;
+}
+
+.botao-limpar {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.botao-limpar:hover {
+    background: #f0f0f0;
+}
+
+
+.ordenacao {
+    max-width: 950px;
+    margin: 25px auto 35px;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+}
+
+.ordenacao label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.ordenacao select {
+    width: 280px;
+    height: 45px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f5f6f8;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ordenacao select:focus {
+    border-color: #0752c9;
+}
+
+#btOrdenar {
+    height: 45px;
+    padding: 0 30px;
+    background: #0752c9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btOrdenar:hover {
+    background: #063e98;
+}
+
