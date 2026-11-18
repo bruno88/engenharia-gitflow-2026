@@ -2,7 +2,7 @@ const inMarca = document.getElementById('inMarca');
 const inModelo = document.getElementById('inModelo');
 const btFiltrar = document.getElementById('btFiltrar');
 const btLimpar = document.getElementById('btLimpar');
-import veiculos from "../veiculos.json" with {type: "json"}
+const veiculosCadastrados = JSON.parse(localStorage.getItem('veiculos')) || [];
 
 const vetorTeste = [
     { marca: 'honda', modelo: 'cg160' },
@@ -59,7 +59,7 @@ function criarCard(marca, modelo, ano, imagem, descricao) {
 
     return card;
 }
-veiculos.forEach(veiculo => {
+veiculosCadastrados.forEach(veiculo => {
     criarCard(
         veiculo.marca,
         veiculo.modelo,
