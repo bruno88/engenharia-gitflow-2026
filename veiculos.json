@@ -1,0 +1,58 @@
+[
+  {
+    "modelo": "Civic",
+    "descricao": "Sedan esportivo, confortável e econômico.",
+    "marca": "Honda",
+    "ano": 2022,
+    "imagem": "https://images.unsplash.com/photo-1594070319944-7c0cbebb6f58?w=500"
+  },
+  {
+    "modelo": "Corolla",
+    "descricao": "Sedan moderno com excelente conforto.",
+    "marca": "Toyota",
+    "ano": 2023,
+    "imagem": "https://images.unsplash.com/photo-1623869675781-80aa31012a5a?w=500"
+  },
+  {
+    "modelo": "Mustang",
+    "descricao": "Esportivo potente com design agressivo.",
+    "marca": "Ford",
+    "ano": 2021,
+    "imagem": "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?w=500"
+  },
+  {
+    "modelo": "Compass",
+    "descricao": "SUV espaçoso ideal para viagens.",
+    "marca": "Jeep",
+    "ano": 2024,
+    "imagem": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=500"
+  },
+  {
+    "modelo": "Onix",
+    "descricao": "Hatch compacto ideal para uso urbano.",
+    "marca": "Chevrolet",
+    "ano": 2022,
+    "imagem": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500"
+  },
+  {
+    "modelo": "Hilux",
+    "descricao": "Picape robusta para trabalho e aventura.",
+    "marca": "Toyota",
+    "ano": 2023,
+    "imagem": "https://images.unsplash.com/photo-1551830820-330a71b99659?w=500"
+  },
+  {
+    "modelo": "A3",
+    "descricao": "Sedan premium com acabamento sofisticado.",
+    "marca": "Audi",
+    "ano": 2021,
+    "imagem": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=500"
+  },
+  {
+    "modelo": "320i",
+    "descricao": "Sedan de luxo com desempenho esportivo.",
+    "marca": "BMW",
+    "ano": 2024,
+    "imagem": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"
+  }
+]
