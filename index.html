@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -12,11 +11,12 @@
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/filtro.css">
-</head> 
+</head>
+
 <body>
     <!-- Criado o primeiro arquivo do projeto -->
 
- <!-- CABECALHO: barra superior + navegacao principal -->
+    <!-- CABECALHO: barra superior + navegacao principal -->
     <header class="site-header">
 
         <!-- Barra superior de informacoes -->
@@ -32,6 +32,8 @@
                     <a href="#contato">Fale conosco</a>
                     <span class="topbar-divider" aria-hidden="true"></span>
                     <a href="#sobre">Sobre nós</a>
+                    <span class="topbar-divider" aria-hidden="true"></span>
+                    <a href="perfil.html">Meu perfil</a>
                 </div>
             </div>
         </div>
@@ -61,8 +63,7 @@
                 <input class="menu-toggle" type="checkbox" id="menu-toggle"
                     aria-label="Abrir ou fechar menu de navegação">
 
-                <label class="menu-button" for="menu-toggle"
-                    aria-label="Abrir ou fechar menu">
+                <label class="menu-button" for="menu-toggle" aria-label="Abrir ou fechar menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -125,13 +126,14 @@
                 </article>
             </div>
         </section>
-        
+
         <section class="formCadastro">
             <h3>Cadastrar um Novo Veículo</h3>
 
             <form id="formCadastroVeiculo">
                 <label>Imagem:</label>
-                <img src="https://midiawm1.webmotors.com.br/wp-content/uploads/2024/08/05142722/Fiat-Uno-Mille-Fire-Economy-2.webp" alt="Imagem de um carro" id="inImg">
+                <img src="https://midiawm1.webmotors.com.br/wp-content/uploads/2024/08/05142722/Fiat-Uno-Mille-Fire-Economy-2.webp"
+                    alt="Imagem de um carro" id="inImg">
 
                 <label for="marca">Marca:</label>
                 <input type="text" id="inMarca" name="marca" placeholder="Digite a marca aqui..." required>
@@ -147,7 +149,7 @@
 
                 <button type="submit">Cadastrar</button>
             </form>
-        
+
         </section>
 
         <!-- NEWSLETTER -->
@@ -172,33 +174,17 @@
                 <form class="newsletter-form">
                     <div class="newsletter-input">
                         <label for="newsletter-nome">Nome</label>
-                        <input
-                            type="text"
-                            id="newsletter-nome"
-                            name="nome"
-                            placeholder="Digite seu nome"
-                            required
-                        >
+                        <input type="text" id="newsletter-nome" name="nome" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="newsletter-input">
                         <label for="newsletter-email">E-mail</label>
-                        <input
-                            type="email"
-                            id="newsletter-email"
-                            name="email"
-                            placeholder="seuemail@exemplo.com"
-                        >
+                        <input type="email" id="newsletter-email" name="email" placeholder="seuemail@exemplo.com">
                     </div>
 
                     <div class="newsletter-input">
                         <label for="newsletter-whatsapp">WhatsApp</label>
-                        <input
-                            type="tel"
-                            id="newsletter-whatsapp"
-                            name="whatsapp"
-                            placeholder="(00) 00000-0000"
-                        >
+                        <input type="tel" id="newsletter-whatsapp" name="whatsapp" placeholder="(00) 00000-0000">
                     </div>
 
                     <p class="newsletter-observacao">
@@ -279,4 +265,5 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
