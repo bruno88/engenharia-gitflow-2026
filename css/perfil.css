@@ -1,0 +1,241 @@
+.perfil-page {
+    margin: 0;
+    background: #f5f6f8;
+}
+
+.perfil-container,
+.perfil-container * {
+    box-sizing: border-box;
+}
+
+.perfil-container {
+    width: min(960px, calc(100% - 40px));
+    margin: 56px auto;
+    color: #23313c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título da página */
+.perfil-etiqueta {
+    display: block;
+    margin-bottom: 12px;
+    color: #0b4bc4;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.perfil-titulo h1 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -1.2px;
+}
+
+.perfil-titulo p {
+    margin: 12px 0 30px;
+    color: #647080;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Cartão principal */
+.perfil-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e2e6ec;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(25, 40, 65, 0.04);
+}
+
+.perfil-card-topo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 32px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.perfil-icone {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    background: #edf3ff;
+    border-radius: 12px;
+    color: #0b4bc4;
+}
+
+.perfil-icone svg {
+    width: 25px;
+    height: 25px;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+}
+
+.perfil-card-topo h2 {
+    margin: 0 0 6px;
+    color: #23313c;
+    font-size: 18px;
+}
+
+.perfil-card-topo p {
+    margin: 0;
+    color: #647080;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Campos em duas colunas */
+#form-perfil {
+    margin: 0;
+}
+
+.perfil-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 28px;
+    padding: 32px;
+}
+
+.perfil-campo {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#form-perfil label {
+    color: #364152;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#form-perfil input,
+#form-perfil select {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid #d9dfe7;
+    border-radius: 7px;
+    background: #fafbfd;
+    color: #23313c;
+    font: inherit;
+    font-size: 15px;
+    color-scheme: light;
+    transition:
+        border-color 0.2s,
+        background-color 0.2s,
+        box-shadow 0.2s;
+}
+
+#form-perfil input::placeholder {
+    color: #737d8c;
+}
+
+#form-perfil input:hover,
+#form-perfil select:hover {
+    border-color: #aab6c7;
+}
+
+#form-perfil input:focus,
+#form-perfil select:focus {
+    outline: none;
+    border-color: #0b4bc4;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(11, 75, 196, 0.12);
+}
+
+/* Rodapé do formulário */
+.perfil-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 32px;
+    border-top: 1px solid #edf0f4;
+    background: #fcfcfd;
+}
+
+.perfil-acoes span {
+    color: #647080;
+    font-size: 12px;
+}
+
+#form-perfil button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 26px;
+    border: 0;
+    border-radius: 7px;
+    background: #0b4bc4;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#form-perfil button:hover {
+    background: #083b9d;
+}
+
+#form-perfil button:focus-visible,
+.perfil-voltar:focus-visible {
+    outline: 3px solid #0b4bc4;
+    outline-offset: 4px;
+}
+
+.perfil-voltar {
+    display: inline-block;
+    margin-top: 24px;
+    color: #526174;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.perfil-voltar:hover {
+    color: #0b4bc4;
+    text-decoration: underline;
+}
+
+/* Celular */
+@media (max-width: 640px) {
+    .perfil-container {
+        width: calc(100% - 32px);
+        margin: 32px auto;
+    }
+
+    .perfil-card-topo {
+        padding: 22px 20px;
+    }
+
+    .perfil-campos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px 20px;
+    }
+
+    #form-perfil input,
+    #form-perfil select {
+        font-size: 16px;
+    }
+
+    .perfil-acoes {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    #form-perfil button {
+        width: 100%;
+    }
+}

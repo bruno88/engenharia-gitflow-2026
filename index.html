@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Car Site - encontre seu próximo veículo.">
+    <title>Car Site</title>
+
+    <!-- Estilos do projeto -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/filtro.css">
+</head>
+
+<body>
+    <!-- Criado o primeiro arquivo do projeto -->
+
+    <!-- CABECALHO: barra superior + navegacao principal -->
+    <header class="site-header">
+
+        <!-- Barra superior de informacoes -->
+        <div class="topbar">
+            <div class="header-container topbar-content">
+                <div class="topbar-left">
+                    <span>Atendimento online</span>
+                    <span class="topbar-divider" aria-hidden="true"></span>
+                    <span>Encontre o veículo ideal para você</span>
+                </div>
+
+                <div class="topbar-right">
+                    <a href="#contato">Fale conosco</a>
+                    <span class="topbar-divider" aria-hidden="true"></span>
+                    <a href="#sobre">Sobre nós</a>
+                    <span class="topbar-divider" aria-hidden="true"></span>
+                    <a href="./perfil.html">Meu perfil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegacao principal -->
+        <div class="main-nav">
+            <div class="header-container nav-content">
+
+                <a class="brand" href="index.html#inicio" aria-label="Car Site - página inicial">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" role="img">
+                            <circle cx="24" cy="24" r="21" />
+                            <path d="M8 27h5l4-8h14l5 8h4v8h-4a4 4 0 0 1-8 0h-8a4 4 0 0 1-8 0H8z" />
+                            <path d="M19 22l-3 5h16l-3-5z" />
+                            <circle cx="18" cy="35" r="2.4" />
+                            <circle cx="32" cy="35" r="2.4" />
+                        </svg>
+                    </span>
+
+                    <span class="brand-name">
+                        <strong>CAR <span>SITE</span></strong>
+                        <small>SUA PRÓXIMA CONQUISTA</small>
+                    </span>
+                </a>
+
+                <!-- Menu mobile -->
+                <input class="menu-toggle" type="checkbox" id="menu-toggle"
+                    aria-label="Abrir ou fechar menu de navegação">
+
+                <label class="menu-button" for="menu-toggle" aria-label="Abrir ou fechar menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="navigation" aria-label="Menu principal">
+                    <a class="nav-link active" href="index.html">Início</a>
+                    <a class="nav-link" href="#comprar">Comprar</a>
+                    <a class="nav-link" href="#vender">Vender</a>
+                    <a class="nav-link" href="#modelos">Modelos</a>
+                    <a class="nav-link" href="tecnologia.html">Tecnologias</a>
+                    <a class="nav-link" href="./sobreNos.html">Sobre nós</a>
+                    <a class="nav-link" href="#contato">Contato</a>
+                    <a class="nav-link" href="servico.html">Serviços</a>
+                    <a class="nav-link" href="mensagens.html">Mensagens</a>
+
+                    <a class="nav-cta" href="explorar.html">EXPLORAR VEÍCULOS</a>
+                </nav>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Conteudo principal do site -->
+    <main id="inicio">
+
+        <section class="inicio">
+            <h1>Encontre o carro ideal para você.</h1>
+            <p>Encontre o carro ideal para você em um só lugar. Na Car Loja, trabalhamos com veículos selecionados e
+                revisados, oferecendo qualidade, segurança e confiança em cada escolha.
+            </p>
+            <img class="imagem" src="./assets/loja-carros.png">
+        </section>
+
+        <section class="sobre" id="sobre">
+            <p class="destaque">POR QUE ESCOLHER A CAR LOJA?</p>
+            <h2>Qualidade e confiança em cada escolha.</h2>
+            <div class="beneficios">
+                <article><strong>✓</strong>
+                    <h3>Carros revisados</h3>
+                    <p>Veículos avaliados para sua segurança.</p>
+                </article>
+                <article><strong>R$</strong>
+                    <h3>Boas condições</h3>
+                    <p>Propostas que combinam com você.</p>
+                </article>
+                <article><strong>★</strong>
+                    <h3>Atendimento próximo</h3>
+                    <p>Conte com nossos especialistas.</p>
+                </article>
+                <article><strong>↔</strong>
+                    <h3>Troca facilitada</h3>
+                    <p>Avaliamos seu carro com agilidade e transparência.</p>
+                </article>
+                <article><strong>▣</strong>
+                    <h3>Documentação segura</h3>
+                    <p>Cuidamos de todos os detalhes da negociação.</p>
+                </article>
+                <article><strong>➜</strong>
+                    <h3>Test drive</h3>
+                    <p>Experimente seu próximo carro antes de decidir.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="formCadastro">
+            <h3>Cadastrar um Novo Veículo</h3>
+
+            <form id="formCadastroVeiculo">
+                <label>Imagem:</label>
+                <img src="https://midiawm1.webmotors.com.br/wp-content/uploads/2024/08/05142722/Fiat-Uno-Mille-Fire-Economy-2.webp"
+                    alt="Imagem de um carro" id="inImg">
+
+                <label for="marca">Marca:</label>
+                <input type="text" id="inMarca" name="marca" placeholder="Digite a marca aqui..." required>
+
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="inModelo" name="modelo" placeholder="Digite o modelo aqui..." required>
+
+                <label for="ano">Ano:</label>
+                <input type="number" id="inAno" name="ano" placeholder="Digite o ano aqui..." required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea name="descricao" id="inDescricao" placeholder="Digite a descrição aqui..."></textarea>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section" id="newsletter">
+            <div class="newsletter-container">
+
+                <div class="newsletter-text">
+                    <span class="newsletter-tag">NOVIDADES CAR SITE</span>
+
+                    <h2>Receba ofertas exclusivas!</h2>
+
+                    <p>
+                        Cadastre-se em nossa newsletter e receba promoções,
+                        novidades e ofertas da semana diretamente no seu contato.
+                    </p>
+
+                    <span class="newsletter-info">
+                        Não é necessário ter uma conta para participar!
+                    </span>
+                </div>
+
+                <form class="newsletter-form">
+                    <div class="newsletter-input">
+                        <label for="newsletter-nome">Nome</label>
+                        <input type="text" id="newsletter-nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="newsletter-input">
+                        <label for="newsletter-email">E-mail</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="seuemail@exemplo.com">
+                    </div>
+
+                    <div class="newsletter-input">
+                        <label for="newsletter-whatsapp">WhatsApp</label>
+                        <input type="tel" id="newsletter-whatsapp" name="whatsapp" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <p class="newsletter-observacao">
+                        Informe seu e-mail, WhatsApp ou ambos.
+                    </p>
+
+                    <button type="button" class="newsletter-button">
+                        Quero receber ofertas
+                    </button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER desenvolvido pela colega -->
+    <footer>
+
+        <div class="informacoes">
+
+            <div class="footer-esquerda">
+
+                <h3>Redes Sociais</h3>
+
+                <div class="links-redes-sociais">
+                    <a href="" aria-label="Instagram">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+
+                    <a href="" aria-label="Facebook">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+
+                    <a href="" aria-label="LinkedIn">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-direita">
+                <h3>Links úteis</h3>
+
+                <div class="links-uteis">
+                    <a href="#">Início</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Contato</a>
+                </div>
+
+                <h3>Contato</h3>
+
+                <div class="links-contato">
+                    <a href="#">e-mail</a>
+                    <a href="#">Telefone</a>
+                    <a href="#">Endereço</a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="f2">
+            <div class="footer-email">
+                <p>© 2026 Car Site. Todos os direitos reservados.</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script type="module" src="./js/script.js"></script>
+    <!-- Biblioteca de icones do footer -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="./models/Veiculo.js"></script>
+
+</body>
+
+</html>

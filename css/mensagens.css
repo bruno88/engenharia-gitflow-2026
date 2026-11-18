@@ -1,0 +1,33 @@
+.pagina-mensagens {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#lista-mensagens {
+    display: grid;
+    gap: 16px;
+}
+
+.cartao-mensagem {
+    padding: 20px;
+    border: 1px solid #dce1e8;
+    border-left: 4px solid #0b46b9;
+    border-radius: 8px;
+    background: #fff;
+    color: #242424;
+    overflow-wrap: anywhere;
+}
+
+.cartao-mensagem h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.cartao-mensagem p {
+    margin: 8px 0 0;
+}
+
+.texto-mensagem {
+    white-space: pre-wrap;
+}

@@ -1,0 +1,194 @@
+/* ================================
+   PÁGINA SOBRE NÓS
+   Só o que é específico desta página.
+   Cabeçalho, rodapé e fundo vêm de base.css e css/style.css
+   ================================ */
+
+/* ===== CORES: para mudar o visual desta página, mexa só aqui ===== */
+.sobre-nos {
+  --destaque: var(--brand-blue, #0646bd);
+  --destaque-claro: #eaf3ff;
+  --branco: #ffffff;
+  --texto: #26343d;
+  --texto-suave: #5b6b73;
+  --borda: #e0eaed;
+
+  color: var(--texto); /* o fundo branco vem do main no base.css */
+  line-height: 1.6;
+  text-align: left;          /* o base.css centraliza tudo no body */
+}
+
+/* ===== BASE (limitada à página, pra não afetar o resto do site) ===== */
+.sobre-nos h1,
+.sobre-nos h2,
+.sobre-nos h3,
+.sobre-nos p,
+.sobre-nos ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sobre-nos h1 { font-size: 2rem; }
+.sobre-nos h2 { font-size: 1.3rem; margin-bottom: 8px; }
+.sobre-nos h3 { font-size: 1.05rem; margin: 8px 0 4px; }
+.sobre-nos p  { color: var(--texto-suave); }
+
+.sobre-nos section { padding: 40px 0; }
+.sobre-nos section.sem-topo { padding-top: 0; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* textos soltos que antes estavam com style="" no HTML */
+.intro { margin-bottom: 16px; }
+.titulo-secao { margin-bottom: 16px; }
+
+/* ===== TOPO (HERO) ===== */
+.hero {
+  background: var(--branco);
+  border-bottom: 1px solid var(--borda);
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.hero h1 { margin-bottom: 12px; }
+
+.hero p {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ===== CARTÕES ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px #23404a12;
+}
+
+.card p { font-size: 0.9rem; }
+
+/* ===== POR QUE CONFIAR ===== */
+.confianca {
+  margin-top: 8px;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+}
+
+.item [class^="icone-"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* ===== QUEM SOMOS ===== */
+.turma {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.turma-icone {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--destaque-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.turma-icone .material-symbols-outlined {
+  font-size: 2.2rem;
+  color: var(--destaque);
+}
+
+.turma .texto { flex: 1; min-width: 240px; }
+.turma .texto h3 { margin: 0; }
+.qtd { font-size: 0.85rem; margin-bottom: 8px; }
+
+.equipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.equipe h3 { margin-top: 0; margin-bottom: 10px; }
+
+.lista-alunos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 6px 16px;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.lista-alunos.uma-coluna { grid-template-columns: 1fr; }
+
+/* ===== INSTITUCIONAL E CONTATO ===== */
+.duas-colunas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.sobre-nos table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sobre-nos td {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.sobre-nos td:first-child { color: var(--texto-suave); }
+.sobre-nos td:last-child  { text-align: right; }
+.sobre-nos tr:last-child td { border-bottom: none; }
+
+.contato a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--texto);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.contato a:hover { color: var(--destaque); }
+
+.contato [class^="icone-"] {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  .sobre-nos h1 { font-size: 1.6rem; }
+}

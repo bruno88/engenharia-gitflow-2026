@@ -1,0 +1,268 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f4f8fa;
+    color: #26343d;
+    font: 16px Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    background-color: white;
+}
+
+/* =========== Formulário de Cadastro =============== */
+
+.formCadastro {
+    max-width: 480px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: #eaf3ff;
+    border: 2px solid #1e6fd9;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 12px rgba(30, 111, 217, 0.25);
+}
+
+.formCadastro h3 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #0d4a9e;
+}
+
+.formCadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formCadastro label {
+    font-weight: bold;
+    color: #0d4a9e;
+}
+
+.formCadastro #inImg {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1e6fd9;
+    margin-bottom: 8px;
+}
+
+.formCadastro input,
+.formCadastro textarea {
+    padding: 10px;
+    border: 1px solid #7fb2f0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #0d2b52;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formCadastro input:focus,
+.formCadastro textarea:focus {
+    border-color: #1e6fd9;
+    box-shadow: 0 0 0 3px rgba(30, 111, 217, 0.25);
+}
+
+.formCadastro textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.formCadastro button {
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1e6fd9;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.formCadastro button:hover {
+    background-color: #0d4a9e;
+}
+
+.inicio {
+    padding: 60px 20px
+}
+
+.destaque {
+    color: #159f9a;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px
+}
+
+.inicio h1 {
+    font-size: 48px;
+    margin: 15px 0;
+    color: #20323b
+}
+
+.inicio p:not(.destaque) {
+    font-size: 20px;
+    color: #5b6b73
+}
+
+.imagem {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 35px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px #23404a26
+}
+
+.imagem:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 22px #23404a26;
+}
+
+.sobre {
+    padding: 60px 20px;
+    border-top: 1px solid #d9e4e8
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin: 10px 0 30px;
+    color: #20323b
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.beneficios article {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e0eaed;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #23404a12;
+    transition: transform .25s ease, box-shadow .25s ease
+}
+
+.beneficios article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px #23404a26
+}
+
+.beneficios strong {
+    color: #159f9a;
+    font-size: 30px
+}
+
+.beneficios h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #26343d
+}
+
+.beneficios p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #687980
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    color:white;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #f5f5f5 15%,
+        #c3c2c2 40%,
+        #303030 80%,
+        #252525 100%
+    );
+    
+}
+
+.informacoes {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    flex-direction: row;
+    gap: 150px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-esquerda, .footer-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #252525;
+    background-color: transparent;
+     font-weight: bold;
+}
+
+a {
+    color: #252525;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    margin: 0;
+}
+
+.links-redes-sociais {
+    display: flex;
+    gap: 10px;
+}
+
+.links-uteis {
+    display: flex;
+    gap: 10px;
+}
+
+.links-contato {
+    display: flex;
+    gap: 10px;
+}
+.card {
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+}
