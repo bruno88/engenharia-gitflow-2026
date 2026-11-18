@@ -1,4 +1,4 @@
-import { Veiculo } from "./Veiculo.js";
+import { Veiculo } from "../models/Veiculo.js";
 
 const formCadastroVeiculo = document.getElementById("formCadastroVeiculo");
 const inImg = document.getElementById("inImg");
