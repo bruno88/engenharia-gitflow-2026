@@ -1,6 +1,7 @@
 /* ================================
    PÁGINA SOBRE NÓS
-   Só o que é específico desta página.
+   Todas as regras começam com .sobre-nos, então nada aqui
+   vaza para as outras páginas (nem os outros CSS atrapalham aqui).
    Cabeçalho, rodapé e fundo vêm de base.css e css/style.css
    ================================ */
 
@@ -13,12 +14,12 @@
   --texto-suave: #5b6b73;
   --borda: #e0eaed;
 
-  color: var(--texto); /* o fundo branco vem do main no base.css */
+  color: var(--texto);
   line-height: 1.6;
-  text-align: left;          /* o base.css centraliza tudo no body */
+  text-align: left; /* o base.css centraliza tudo no body */
 }
 
-/* ===== BASE (limitada à página, pra não afetar o resto do site) ===== */
+/* ===== BASE (limitada à página) ===== */
 .sobre-nos h1,
 .sobre-nos h2,
 .sobre-nos h3,
@@ -36,39 +37,35 @@
 .sobre-nos section { padding: 40px 0; }
 .sobre-nos section.sem-topo { padding-top: 0; }
 
-.container {
+.sobre-nos .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* textos soltos que antes estavam com style="" no HTML */
-.intro { margin-bottom: 16px; }
-.titulo-secao { margin-bottom: 16px; }
+.sobre-nos .intro { margin-bottom: 16px; }
+.sobre-nos .titulo-secao { margin-bottom: 16px; }
 
 /* ===== TOPO (HERO) ===== */
-.hero {
+.sobre-nos .hero {
   background: var(--branco);
   border-bottom: 1px solid var(--borda);
   text-align: center;
   padding: 56px 24px;
 }
 
-.hero h1 { margin-bottom: 12px; }
+.sobre-nos .hero h1 { margin-bottom: 12px; }
 
-.hero p {
+.sobre-nos .hero p {
   max-width: 520px;
   margin: 0 auto;
 }
 
-/* ===== CARTÕES ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-}
-
-.card {
+/* ===== CARTÕES =====
+   Todos os cartões da página compartilham o mesmo visual.
+   Se criar um cartão novo, é só acrescentar o nome da classe na lista. */
+.sobre-nos :is(.cardMissao, .cardVisao, .cardValor,
+               .cardTurma, .cardOrientador, .cardLista, .cardContato) {
   background: var(--branco);
   border: 1px solid var(--borda);
   border-radius: 10px;
@@ -76,16 +73,25 @@
   box-shadow: 0 4px 12px #23404a12;
 }
 
-.card p { font-size: 0.9rem; }
+.sobre-nos :is(.cardMissao, .cardVisao, .cardValor,
+               .cardTurma, .cardOrientador, .cardLista, .cardContato) p {
+  font-size: 0.9rem;
+}
+
+.sobre-nos .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
 
 /* ===== POR QUE CONFIAR ===== */
-.confianca {
+.sobre-nos .confianca {
   margin-top: 8px;
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 }
 
-.item {
+.sobre-nos .item {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -96,20 +102,20 @@
   font-size: 0.9rem;
 }
 
-.item [class^="icone-"] {
+.sobre-nos .item [class^="icone-"] {
   width: 1.2rem;
   height: 1.2rem;
 }
 
 /* ===== QUEM SOMOS ===== */
-.turma {
+.sobre-nos .cardTurma {
   display: flex;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.turma-icone {
+.sobre-nos .turma-icone {
   width: 72px;
   height: 72px;
   border-radius: 50%;
@@ -119,25 +125,25 @@
   justify-content: center;
 }
 
-.turma-icone .material-symbols-outlined {
+.sobre-nos .turma-icone .material-symbols-outlined {
   font-size: 2.2rem;
   color: var(--destaque);
 }
 
-.turma .texto { flex: 1; min-width: 240px; }
-.turma .texto h3 { margin: 0; }
-.qtd { font-size: 0.85rem; margin-bottom: 8px; }
+.sobre-nos .cardTurma .texto { flex: 1; min-width: 240px; }
+.sobre-nos .cardTurma .texto h3 { margin: 0; }
+.sobre-nos .qtd { font-size: 0.85rem; margin-bottom: 8px; }
 
-.equipe {
+.sobre-nos .equipe {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   margin-top: 16px;
 }
 
-.equipe h3 { margin-top: 0; margin-bottom: 10px; }
+.sobre-nos .equipe h3 { margin-top: 0; margin-bottom: 10px; }
 
-.lista-alunos {
+.sobre-nos .lista-alunos {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -146,10 +152,10 @@
   color: var(--texto-suave);
 }
 
-.lista-alunos.uma-coluna { grid-template-columns: 1fr; }
+.sobre-nos .lista-alunos.uma-coluna { grid-template-columns: 1fr; }
 
 /* ===== INSTITUCIONAL E CONTATO ===== */
-.duas-colunas {
+.sobre-nos .duas-colunas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
@@ -170,7 +176,7 @@
 .sobre-nos td:last-child  { text-align: right; }
 .sobre-nos tr:last-child td { border-bottom: none; }
 
-.contato a {
+.sobre-nos .cardContato a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -181,9 +187,9 @@
   transition: color 0.2s ease;
 }
 
-.contato a:hover { color: var(--destaque); }
+.sobre-nos .cardContato a:hover { color: var(--destaque); }
 
-.contato [class^="icone-"] {
+.sobre-nos .cardContato [class^="icone-"] {
   width: 1.1rem;
   height: 1.1rem;
 }
